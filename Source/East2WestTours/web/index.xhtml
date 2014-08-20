@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link href="style/header_footer.css" rel="stylesheet" type="text/css"/>
+        <link href="style/common.css" rel="stylesheet" type="text/css"/>
+        <link href="style/triip.css" rel="stylesheet" type="text/css"/>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <title>Facelet Title</title>
+        <script src="https://static.triip.me/js/jcarousel/jquery.jcarousel.min.js"></script>
+        <script src="https://static.triip.me/js/triip.js?v=v630"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var bg_urls = ["https://lh6.ggpht.com/Eaz6WUIqnekqbE70SwlrbRmXYD6G9mayira2H4C2NzF7EHsN5UkZzyjyGiG0qiO0m90gsWDn-xQ6S5Jzk7ChIVvLWw=s1265", "https://lh3.ggpht.com/agNdiLzRXH38Ry_5gBy-c4aQKFNPsOymCLKk9Ot0rCAeJwsi9tW5QjCF7N3QtfARTb_w4mArNEbj4Jq1XWv4rT4g7Q=s1265", "https://lh4.ggpht.com/2ykTOWoC21yYcd7isBu-2psmDvqRYQ17_aFSdyH7VsboxtITghT8q5mMk1n18LuKlTjmflxYbw--VcZnDk8kDUU=s1265", "https://lh4.ggpht.com/HpWwXj2EKob1BMUSepErY1S347yhFAJN5T_aFd2PMFtZIU5b6NPutohg3SCxZVuRtKQSGHPHIYiLmUfZxv8k7fLkuA=s1265", "https://lh5.ggpht.com/DHlxxozC3WsXs_uZ8FKvYdJsSei5OsjlvtOJFdKq9_L3iSiUkOC1lZA595RcX6DBjU3KxzyyZ8rJSCkh95iscBvS=s1265", "https://lh6.ggpht.com/qce3PKj-a7JitE-uQgZBjJbOXlBZ5TeMVhaYxy0mysf5en5iRxmVxb_WIcuUZ3xmNfyqngWBNNKXGjLDOcZRZqg=s1265", "https://lh3.ggpht.com/I2iG1q1yeivqJVRh1FpxPH1AT-51QhEmwT1Xt_mQ8w_zL6vIMpp8YizzzwY6To6ph-Av6aGw8SKKN94FnJ2-ZiQ=s1265", "https://lh3.ggpht.com/XqhD3RuK1AzBS3rYuTYI0F0Y9Yw8SlFVhcFgr_Z0L4ZbC2bOIT0d7q0W_LQiZ-P3qZeWvRsii45KGBUxoXl-d90=s1265", "https://lh4.ggpht.com/VGv-ip1-lb-rJ59WVPIOP-dsA4lwxxSIV36x1WN4S47cL35ajQfjtYPfLJ0XIZ-Mlu-XiXss3F2kgiZE8OJ1wzA=s1265", "https://lh3.ggpht.com/fJaArln_RaYYfjALJQ0P1ARXGe7cPh5v3XGLy_Q_L7WhwZcQ1_Khf4_W9-xha1zgNitbFtRAiXXae3TrUo7vwri8=s1265"];
+                var bg_number = Math.floor(Math.random() * bg_urls.length);
+                $('.ii_banner').css("background-image", "url(" + bg_urls[bg_number] + ")");
+                $('.ii_banner').addClass('bg_' + bg_number);
+            });
+        </script>
+    </h:head>
+    <h:body >
+        <div class = "ii_menu_wr fix_top fw" >
+            <div class = "header_menu ii_w" >
+                <div class = "t_l_menu l" >
+                    <a class = "l logo_small" href = "/" >
+                        <span class = "triip_logo bl" > </span>
+                    </a>
+                    <form class = "search_wr ib l hide_fl" action = "/search/" method = "GET" >
+                        <input class = "long_input l search_input" name = "q" type = "text" placeholder = "Search" value = "" />
+                        <input class = "l search_btn" type = "submit" value = "Search" />
+                    </form>
+                    <div class = "l al top_menu_destination" >
+                        <div class = "ii_dropdown_wr destination_select" >
+                            <div class = "ii_dropdown_2wr l place_disclosure" >
+                                <div class = "mi_wr ii_disclosure disclosure_link" >
+                                    <span class = "b menu_item place_desination bl" >
+                                        <span class = "ellipsis ib place_menu l" >
+                                            Place
+                                        </span>
+                                        <span class = "ib l"> &#x25Be; </span>
+                                    </span>
+                                </div>
+                                <div class = "ii_disclosure_list sd place_list" style = "display:none" >
+                                    <div class = "place_list_wr" >
+                                        <span class = "country_wr" >
+                                            <b class = "" >
+                                                <a class = "country_item place_item bl ii_item" href = "/vietnam/"> Vietnam </a>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="banner_wrap" class="ii_banner fw home_banner">
+            <div class="banner ii_w ac">
+                <p class="banner_intro txt_sd m_f_fl">Enjoy amazing private tours crafted by hand-picked local experts</p>
+                <div class="ib ii_dropdown_wr banner_des_select hide_64">
+                    <div class="ii_dropdown_2wr place_disclosure">
+                        <div class="ii_disclosure disclosure_link">
+                            <div class="place_desination rb4 sd pad_0_20 triip_btn">Choose your destinations&#x25Be;</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <style>.news_wr{height:40px;padding:26px 0;background:#f4f4f4;}.as_seen_on_wr{height:40px;}.as_seen_on{background:#fff;color:#9e9e9e;padding:5px 20px;line-height:22px;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;margin-right:10px;margin-top:4px;font-size:1.1em;margin-left:35px;}.news_logo{margin-right:15px;margin-top:8px;}.news_logo img{height:25px;}</style>
+        <div class="news_wr fw hide_fl sd">
+            <div class="ii_w al as_seen_on_wr oh">
+                <div class="l as_seen_on">As seen on</div>
+                <a class="news_logo l" href="http://thenextweb.com/asia/2013/08/22/tired-of-getting-scammed-while-traveling-triip-links-tourists-up-with-locals-in-southeast-asia/?fromcat=all" target="_blank"><img src="https://static.triip.me/images/hiw/the-next-web.png"/></a>
+                <a class="news_logo l" href="http://ventureburn.com/2013/06/around-the-world-in-7-startups-traveling-ventures-with-a-twist/" target="_blank"><img src="https://static.triip.me/images/hiw/ventureburn_v.png"/></a>
+                <a class="news_logo l" href="http://www.techinasia.com/vietnamese-startup-triip-crowdsources-tour-guides-asia/" target="_blank"><img src="https://static.triip.me/images/hiw/tech_in_asia_logo.png"/></a>
+                <a class="news_logo l" href="http://www.tnooz.com/2013/05/08/tlabs/triip-wants-to-bridge-local-people-and-travelers-to-create-rich-experience/" target="_blank"><img src="https://static.triip.me/images/hiw/tnooz_logo.png"/></a>
+                <a class="news_logo l" href="http://www.forbes.com/sites/yunitaong/2014/06/23/southeast-asias-sharing-economy-start-ups-may-produce-the-next-airbnb-or-uber/" target="_blank"><img style="height:22px;" src="https://static.triip.me/images/hiw/forbes_logo.png"/></a>
+                <a class="news_logo l" href="http://e27.co/2013/06/10/triip-a-new-hope-for-vietnam-tourism/" target="_blank"><img src="https://static.triip.me/images/hiw/e27_logo.png"/></a>
+                <a class="news_logo l" href="http://www.flightnetwork.com/blog/explore-asian-culture-home-cooking/" target="_blank"><img src="https://static.triip.me/images/hiw/FN_Logo.png"/></a>
+                <a class="news_logo l" href="http://saigoneer.com/" target="_blank"><img style="width:110px;height:22px;" src="https://static.triip.me/images/hiw/saigoneer-small.png"/></a>
+            </div>
+        </div>
+        <div class="ii_content_wr fw ">
+            <div class=" ii_w">
+                <div id="featured_creator" class="triip_fl"></div>
+                <div class="triip_home_wr">
+                    <h2 class="al feature_bar home_featured_bar">
+                        <a class="" href="/triip-unique">
+                            Triip &#39;s unique
+                            <span class="s_font hide_fl">View all &raquo;</span>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
