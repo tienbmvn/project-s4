@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+        <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+        <script src="js/jquery.fitvids.js" type="text/javascript"></script>
+        <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+        <link href="style/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+        <link href="style/common.css" rel="stylesheet" type="text/css"/>
+        <link href="style/triip.css" rel="stylesheet" type="text/css"/>
+        <link href="style/header_footer.css" rel="stylesheet" type="text/css"/>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div class = "ii_menu_wr fix_top fw" >
+            <div class = "header_menu ii_w" >
+                <div class = "t_l_menu l" >
+                    <a class = "l logo_small" href = "/" >
+                        <span class = "triip_logo bl" > </span>
+                    </a>
+                    <form class = "search_wr ib l hide_fl" action = "/search/" method = "GET" >
+                        <input class = "long_input l search_input" name = "q" type = "text" placeholder = "Search" value = "" />
+                        <input class = "l search_btn" type = "submit" value = "Search" />
+                    </form>
+                    <div class = "l al top_menu_destination" >
+                        <div class = "ii_dropdown_wr destination_select" >
+                            <div class = "ii_dropdown_2wr l place_disclosure" >
+                                <div class = "mi_wr ii_disclosure disclosure_link" >
+                                    <span class = "b menu_item place_desination bl" >
+                                        <span class = "ellipsis ib place_menu l" >
+                                            Place
+                                        </span>
+                                        <span class = "ib l"> &#x25Be; </span>
+                                    </span>
+                                </div>
+                                <div class = "ii_disclosure_list sd place_list" style = "display:none" >
+                                    <div class = "place_list_wr" >
+                                        <span class = "country_wr" >
+                                            <b class = "" >
+                                                <a class = "country_item place_item bl ii_item" href = "/vietnam/"> Vietnam </a>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fw triip_top_wr sd fix_menu">
+            <div class="ii_w">
+                <div class="book_form_wrap triip_fl">
+                    <form class="pick_date_form ac book_form " id="triip_book_form" method="POST" action="/payments/book/"><input type='hidden' name='csrfmiddlewaretoken' value='LW1EqHYPblNstCwMJeJr9n8TMnykj2ky'/>
+                        <div class="bf_row ib triip_fl fw_fl ac_fl">
+                            <p class="bf_label scroll_hi hide_74">Departure date</p>
+                            <div class="bf_r_detail ii_field_wr">
+                                <input autocomplete="off" id="id_date" name="date" type="text"/>
+                                <div class="sd rb4" style="display:none" id="calendar"></div>
+                                <span class="avail_time">8 a.m.</span>
+                            </div>
+                        </div>
+                        <div class="triip_fl fw_fl ac_fl ib bf_row">
+                            <div class="bf_row ib triip_fl">
+                                <p class="bf_label scroll_hi hide_74 l">Passengers</p>
+                                <div class="bf_r_detail ii_field_wr">
+                                    <table class="bf_table ib">
+                                        <tr>
+                                            <td><span id="triip_price" class="l"><b id="selected_price"></b> x </span></td>
+                                            <td><div class="ii_slt_wr bf_quantity"> 
+                                                    <select id="id_quantity" name="quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bf_row ib triip_fl fw_fl ac_fl">
+                            <p class="bf_label scroll_hi hide_74 l">Total</p>
+                            <div class="bf_r_detail ii_field_wr">
+                                <table class="bf_table ib">
+                                    <tr>
+                                        <td>=</td>
+                                        <td><span id="total_price" class="price r b big_font"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- end banner-->
+        <div class="c"></div>
+        <div class="ii_content_wr fw ">
+            <div class="ii_content ii_w">
+                <div class="wrapper">
+                    <div>
+                        <div class="triip_detail_wrap triip_fl">
+                            <div class="pad10_0">
+                                <div class="triip_breadcrumb">
+                                    <a href="/">Triip</a> ›
+                                    <a href="/vietnam/">Vietnam</a> ›
+                                    <a href="/vietnam/sapa/">Sapa</a> ›
+                                    <a href="/sapa/hmong-authentic-sin-chai-village-adventuring-with-kids-23/">Charity Travelling with Black H&#39;mong kids in Sin Chai village.</a>
+                                </div>
+                            </div>
+                            <div class="l_fl">
+                                <div class="triip_top_detail r_box_wr">
+                                    <div class="triip_img_title_wr pr">
+                                        <div class="triip_top_img_wr"></div>
+                                        <div class="triip_title_wrap pa">
+                                            <div class="triip_ind_wr ac"></div>
+                                            <div class="triip_title_rating">
+                                                <h1 class="triip_title">Charity Travelling with Black H&#39;mong kids in Sin Chai village. </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="r_box_text pad20_0">
+                                        <div class="highlight_txt">
+                                            <h3 class="l">What's so special?</h3>
+                                            <div class="r">
+                                                <style type="text/css">.social_icon_wr{margin-left:5px;}.triip_share{padding-top:9px;}.gg_icon_wr{width:60px;}</style>
+                                                <div class="triip_share r fw_fl al_fl">
+                                                    <div class="l social_icon_wr pr fb_icon_wr">
+                                                        <div class="fb-like oh" data-href="http://www.triip.me/sapa/hmong-authentic-sin-chai-village-adventuring-with-kids-23/" data-width="60" data-height="26" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
+                                                    </div>
+                                                    <div class="l social_icon_wr pr tw_icon_wr">
+                                                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.triip.me/sapa/hmong-authentic-sin-chai-village-adventuring-with-kids-23/">Tweet</a>
+                                                        <script>!function(d, s, id) {
+                                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                                if (!d.getElementById(id)) {
+                                                                    js = d.createElement(s);
+                                                                    js.id = id;
+                                                                    js.src = "//platform.twitter.com/widgets.js";
+                                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                                }
+                                                            }(document, "script", "twitter-wjs");</script>
+                                                    </div>
+                                                    <div class="l social_icon_wr pr pi_icon_wr">
+                                                        <!--<a href="//pinterest.com/pin/create/button/?url=http%3A//www.triip.me/sapa/hmong-authentic-sin-chai-village-adventuring-with-kids-23/&media=https%3A//static.triip.me/triips/images/23/393/1a973c22e44a11e2846ed289792f3705.jpg&description=Sin%20Chai%20village%20may%20not%20be%20a%20well-known%20attraction%20for%20both%20tourist%20and%20Vietnamese%20people.%20Yet%2C%20inside%20this%20pristine%20village%2C%20there%20are%20a%20lot%20of%20wonderful%20scenery%20that%20could%20even%20make%20hardest%20hearts%20melt%20away%E2%80%A6I%20bet.%20The%20very%20special%20thing%20is%20that%2C%20we%20will%20not%20be%20alone%2C%20all%20the%20kids%20in%20the%20village%20will%20be%20our%20companions%20during%20the%20adventure%20as%20you%20will%20fall%20in%20love%20with%20them.%20They%20will%20be%20around%20all%20the%20time%2C%20singing%2C%20dancing%20and%20will%20do%20anything%20to%20make%20you%20smile.%20Moreover%2C%20you%20can%20teach%20them%20songs%2C%20poems%20that%20you%20used%20to%20love%20when%20you%20were%20a%20child.%20Let%E2%80%99s%20take%20a%20look%20at%20these%20pictures%20and%20imagine%20that%20you%E2%80%99re%20flying%20with%20these%20innocent%20angels%21" data-pin-do="buttonPin" data-pin-config="none"></a>-->
+                                                    </div>
+                                                    <div class="l social_icon_wr pr gg_icon_wr oh">
+
+                                                        <script type="text/javascript">
+                                                            (function() {
+                                                                var po = document.createElement('script');
+                                                                po.type = 'text/javascript';
+                                                                po.async = true;
+                                                                po.src = 'https://apis.google.com/js/plusone.js';
+                                                                var s = document.getElementsByTagName('script')[0];
+                                                                s.parentNode.insertBefore(po, s);
+                                                            })();
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    function trackTwitter(intent_event) {
+                                                        if (intent_event) {
+
+                                                            mixpanel.track("Unregister user share", {"Triip": "hmong-authentic-sin-chai-village-adventuring-with-kids-23", "Social": "Twitter"});
+
+                                                        }
+                                                    }
+                                                    function plus_click() {
+
+                                                        mixpanel.track("Unregister user share", {"Triip": "hmong-authentic-sin-chai-village-adventuring-with-kids-23", "Social": "Google Plus"});
+
+                                                    }
+                                                    // Wrap event bindings - Wait for async js to load
+                                                    twttr.ready(function(twttr) {
+                                                        //event bindings
+                                                        twttr.events.bind('tweet', trackTwitter);
+                                                    });
+
+                                                    $('.fb_icon_wr').on('click', function() {
+
+                                                        mixpanel.track("Unregister user share", {"Triip": "hmong-authentic-sin-chai-village-adventuring-with-kids-23", "Social": "Facebook"});
+
+                                                    });
+
+                                                    $('.pi_icon_wr').on('click', function() {
+
+                                                        mixpanel.track("Unregister user share", {"Triip": "hmong-authentic-sin-chai-village-adventuring-with-kids-23", "Social": "Pinterest"});
+
+                                                    });
+                                                </script>
+                                            </div>
+                                            <div class="c"></div>
+                                        </div>
+                                        <div class="highlight_txt"> <p>Sin Chai village may not be a well-known attraction for both tourist and Vietnamese people. Yet, inside this pristine village, there are a lot of wonderful scenery that could even make hardest hearts melt away…I bet. The very special thing is that, we will not be alone, all the kids in the village will be our companions during the adventure as you will fall in love with them. They will be around all the time, singing, dancing and will do anything to make you smile. Moreover, you can teach them songs, poems that you used to love when you were a child. Let’s take a look at these pictures and imagine that you’re flying with these innocent angels!</p> </div>
+                                    </div>
+                                </div>
+                                <div class="triip_extra r_box_wr" id="triip_highlights">
+                                    <div class="triip_highlights">
+                                        <h3><b class="triip_highlight_no">1</b>Trekking from Sapa Market</h3>
+                                        <div class="r_box_text">
+                                            <p class="highlight_img"><img width="400" alt="" src="https://lh5.ggpht.com/PBqIC614DFILyJY9pgS5q4puy0Qu8b4iK55uZh2yQW4QobBtiFYBIGmrLE0DtOXvoC2k5LTh6WiscF80lUVeums=s649"/></p><p class="highlight_txt">Let's start from Sapa, pass through Cat Cat Village.</p><p class="highlight_img"><img width="400" alt="" src="https://lh4.ggpht.com/kdMyfukyjtEHGI_G0VciFZ_2WdVbptgoHMiToKULbC5BxkQofNkn8ScW34IQKC3NiRG0tjAjCCRaLu8PowF4kR8=s649"/></p><p class="highlight_txt">Visit primary school and see intersting lovely dance in breaking time.</p>
+                                        </div>
+                                        <h3><b class="triip_highlight_no">2</b>We are welcome to Sin Chai village with smiles</h3>
+                                        <div class="r_box_text">
+                                            <p class="highlight_img"><img width="400" alt="" src="https://lh6.ggpht.com/e33ko68Es3sTgSiuSMbUJMI93Vdymm6WpFAjcvmlDrTwf-EXZ1ZTstmt4XAVSYuh-sD24Hljoch41oY5zcVGtlO0=s649"/></p><p class="highlight_txt">This is the very first reason I want you to come here! A peaceful and fresh atmosphere apart from the busy city life will definitely bring calm to your mind.</p><p class="highlight_img"><img width="400" alt="" src="https://lh3.ggpht.com/tww_uipqZ9ZKq773efmMuIQ4y2qwdkARJSiQjzUtZOs6yO9c9H3gyKD6xlvs-METrUNRRE79zDWl0NqiGjkpDpD2=s649"/></p><p class="highlight_txt">And next reason, the main one, are these smiles!</p><p class="highlight_img"><img width="400" alt="" src="https://lh5.ggpht.com/k3-XHgARW4HdbrOD84JfLhRJjwl14L3Nl07OnAxepylz6IH8Otg9YtqBCbfj5eBRPaJr_FH0Aq6JjMVyIfErC0HxmA=s649"/></p><p class="highlight_txt">I will tell you the stories of these kids as we teach them sing songs together.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="triip_extra" id="triip_reviews">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r td_right_col ac_fl fw_fl">
+                            <div class="al">
+                                <div class="triip_detail_box rb10 oh mar20_0 w_bg">
+                                    <div class="triip_bg pad0_20"><h4 class="clr_FFF pad10_0">Triip detail</h4></div>
+                                    <div class="pad10_0">
+                                        <div class="pad0_20">
+                                            <div class="pad10_0">
+                                                <div class="b">Place:</div>
+                                                <a class="tdb_item tdb_place" href="/sapa/">Sapa</a>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Transportation:</div>
+                                                <div class="tdb_item tdb_no_icon">
+                                                    <div class="tran_icon tran_bicycle"></div>
+                                                    <div class="tran_icon tran_walking"></div>
+                                                </div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Duration:</div>
+                                                <div class="tdb_item tdb_duration">8 hours</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Language:</div>
+                                                <div class="tdb_item tdb_language">English</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Max quantity:</div>
+                                                <div class="tdb_item tdb_quantity">5 people</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Category:</div>
+                                                <div class="ib">
+                                                    <a class="ib category_icon category_art-culture" href="/vietnam/sapa/?category=art-culture" title="Art &amp; Culture"></a>
+                                                </div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Including:</div>
+                                                <div class="tdb_item tdb_include tdb_clude"><p>Entrance tickets, English speaking guide, lunch, candies and sweets for kids, motorbike-taxi pick up back to Sapa.</p></div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Excluding:</div>
+                                                <div class="tdb_item tdb_exclude tdb_clude"><p>Personal expenses.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br class="c"/>
+                        <script>
+                            mixpanel.track_links(".other_triips_wr .tb_cover_wr, .other_triips_wr .jcarousel-next, .other_triips_wr .jcarousel-prev", "Click on related triips");
+                        </script>
+                    </div>  
+                    <br class="c"/>
+                </div>
+            </div>
+        </div>
+        <div class="footer_wr fw">
+            <div class="footer ii_w ac_fl pr">
+                <div class="pr">
+                    <div class="r footer_menu txt_menu triip_fl">
+                        <a class="footer_item" href="https://static.triip.me/The_Triip_Book_1.0.pdf">Triip Book</a>
+                        <a class="footer_item" href="/wiki-triip/">Wiki Triip</a>
+                        <a class="footer_item" href="/blog/">Blog</a>
+                        <a class="footer_item" href="/about-us/">About us</a>
+                        <a class="footer_item" href="/contact-us/">Contact</a>
+                        <a class="footer_item" href="/faqs/">FAQs</a>
+                        <a class="footer_item" href="/terms-of-service/">Policies</a>
+                    </div>
+                    <div class="l triip_fl">
+                        <div class="l footer_parner triip_fl">
+                            <div>Partners</div>
+                            <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics"/></a>
+                        </div>
+                        <div class="soccial_footer l triip_fl">
+                            <div>Find us on</div>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://www.facebook.com/triip.me">
+                                <img src="https://static.triip.me/images/facebook.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item first img_menu" href="http://twitter.com/triipme">
+                                <img src="https://static.triip.me/images/twitter.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="publisher" class="footer_item img_menu" href="https://plus.google.com/117155709114209869218/posts">
+                                <img src="https://static.triip.me/images/google_plus.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://pinterest.com/triipme/">
+                                <img src="https://static.triip.me/images/pinterest.svg" width="36" height="36"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="triip_fl r"><span class=" ">©2013 Triip Corp. All rights reserved.</span></div>
+                    <div class="c"></div>
+                </div>
+                <div class="c"></div>
+            </div>
+        </div>
+
+        <script data-cfasync="false" type="text/javascript">
+            window.$zopim || (function(d, s) {
+                var z = $zopim = function(c) {
+                    z._.push(c)
+                }, $ = z.s =
+                        d.createElement(s), e = d.getElementsByTagName(s)[0];
+                z.set = function(o) {
+                    z.set.
+                            _.push(o)
+                };
+                z._ = [];
+                z.set._ = [];
+                $.async = !0;
+                $.setAttribute('charset', 'utf-8');
+                $.src = '//cdn.zopim.com/?13uwPOgm3M89c6wZ1Ss1Rx9T3SdxfJc9';
+                z.t = +new Date;
+                $.
+                        type = 'text/javascript';
+                e.parentNode.insertBefore($, e)
+            })(document, 'script');</script>
+        <style>.meshim_components_FirstUse{display:none!important;}</style>
+
+        <div class="ii_overlay ii_overlay_can_close place_request_lb" style="display:none">
+            <div class="ii_orl_wr pad10">
+                <div class="ii_orl_wr2 rb4 fw_fl">
+                    <div id="trav_place_request">
+                        <div class="pad10">
+                            <h2 class="clr_ii pad10">Request destination</h2>
+                            <p>Please enter your desired destination. <br/>We will notify you when it is available.</p>
+                            <div class="ii_field_wr">
+                                <input type="text" id="trav_place_txt"/>
+                            </div>
+                            <a id="trav_request_btn" class="disable_btn ii_btn pad0_10 bl mar10">Send Request</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ii_overlay ii_overlay_can_close send_msg_lb" style="display:none">
+            <div class="ii_orl_wr pad10">
+                <div class="ii_orl_wr2 rb10 fw_fl">
+                    <script>
+                        var disabledDays = "2014-08-23,2014-08-24,2014-08-30,2014-08-31,2014-09-06,2014-09-07".split(",");
+                        $(function() {
+                            $('#id_proposed_date').click(function() {
+                                $(this).datepicker('destroy').datepicker({
+                                    dateFormat: 'yy-mm-dd',
+                                    minDate: 0,
+                                    beforeShowDay: function(date) {
+                                        str_date = strDate(date);
+                                        if ($.inArray(str_date, disabledDays) >= 0)
+                                            return [false, ''];
+                                        return [true, ''];
+                                    }
+                                }).focus();
+                            });
+                        });</script>
+                    <div class="msg_form_wr">
+                        <form class="pick_date_form disbale_submit" id="msg_form" action="/messages/23/" method="POST"><input type='hidden' name='csrfmiddlewaretoken' value='an8yXxuM4MCETZww1ACmXM1CyMr40iTy'/>
+                            <div class="pad15">
+                                <div class="ii_field_wr pad10_0">
+                                    <div class="te_hint">Propose another date <span class="opt_fld">(optional)</span></div>
+                                    <div class="">
+                                        <input id="id_proposed_date" name="proposed_date" type="text"/>
+                                        <div class="sd rb4" style="display:none" id="request_calendar"></div>
+                                    </div>
+                                </div>
+                                <div class="ii_field_wr mar10_0">
+                                    <div class="te_hint">Tell Nghiêm Xuân what you concern about this triip</div>
+                                    <div class="ii_field_wr"><textarea class="input_required" cols="40" id="id_content" name="content" placeholder="Your message" rows="10">
+                                        </textarea></div>
+                                </div>
+                                <div class="tc_notify ii_shape bd pad15 triip_fl pad10_fl rb4">
+                                    <div><b class="ii_shape">Private Message Policy</b></div>
+                                    <div>All contact information such as email, phone number, address can be exchanged after the triip is booked.</div>
+                                </div>
+                                <style>.tc_notify{margin:20px 120px;background:#f1fefd;}.tc_notify b{border-left:2px solid #cb5047;padding-left:20px;display:block;margin-bottom:5px;color:#cb5047;}.tc_notify b:before{left:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid #cb5047;}.msg_form_wr .tc_notify{margin:10px 0;text-align:left;}</style>
+                                <input id="msg_click_btn" type="submit" class="submit_btn ii_btn ac pad0_20" value="Send message"/>
+                                <script type="text/javascript">
+                                    $('#msg_click_btn').on('click', function() {
+                                        mixpanel.track("Send message", {"Triip": "hmong-authentic-sin-chai-village-adventuring-with-kids-23", "Sender": "None - "});
+                                    });</script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
