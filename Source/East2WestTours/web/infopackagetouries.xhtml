@@ -3,21 +3,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+        <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+        <script src="js/jquery.fitvids.js" type="text/javascript"></script>
+        <script src="js/jquery.bxslider.js" type="text/javascript"></script>
+        <link href="style/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
         <link href="style/common.css" rel="stylesheet" type="text/css"/>
         <link href="style/triip.css" rel="stylesheet" type="text/css"/>
         <link href="style/header_footer.css" rel="stylesheet" type="text/css"/>
         <link href="style/style.css" rel="stylesheet" type="text/css"/>
         <title>Info</title>
         <script type="text/javascript">
-            $(document).ready(function (){
-                    if ($(window).width() > 640){
-                $('.triip_detail_bd_wr .ii_content').css('padding-top', $('.triip_top_wr').height() + 50 + 'px');
+            $(document).ready(function() {
+            if ($(window).width() > 640) {
+            $('.triip_detail_bd_wr .ii_content').css('padding-top', $('.triip_top_wr').height() + 50 + 'px');
             }
-
-         
+            };</script>
+        <!--        <script type="text/javascript">
+                            $(document).ready(function (){
+                    $('.bxslider').bxSlider();
+                    })
+                </script>-->
+        <script type="text/javascript">
+                    $(document).ready(function (){
+            $('.bxslider').bxSlider();
+            });
         </script>
     </h:head>
     <h:body>
+
+
+
+
+
         <div class = "ii_menu_wr fix_top fw" >
             <div class = "header_menu ii_w" >
                 <div class = "t_l_menu l" >
@@ -58,13 +77,184 @@
             <div class="ii_w">
                 <div class="book_form_wrap triip_fl">
                     <form class="pick_date_form ac book_form " id="triip_book_form" method="POST" action="/payments/book/"><input type='hidden' name='csrfmiddlewaretoken' value='LW1EqHYPblNstCwMJeJr9n8TMnykj2ky'/>
-                     <div class="bf_row ib triip_fl fw_fl ac_fl">
-                            
+                        <div class="bf_row ib triip_fl fw_fl ac_fl">
+                            <p class="bf_label scroll_hi hide_74">Departure date</p>
+                            <div class="bf_r_detail ii_field_wr">
+                                <input autocomplete="off" id="id_date" name="date" type="text"/>
+                                <div class="sd rb4" style="display:none" id="calendar"></div>
+                                <span class="avail_time">8 a.m.</span>
+                            </div>
+                        </div>
+                        <div class="triip_fl fw_fl ac_fl ib bf_row">
+                            <div class="bf_row ib triip_fl">
+                                <p class="bf_label scroll_hi hide_74 l">Passengers</p>
+                                <div class="bf_r_detail ii_field_wr">
+                                    <table class="bf_table ib">
+                                        <tr>
+                                            <td><span id="triip_price" class="l"><b id="selected_price"></b> x </span></td>
+                                            <td><div class="ii_slt_wr bf_quantity"> 
+                                                    <select id="id_quantity" name="quantity">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select></div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bf_row ib triip_fl fw_fl ac_fl">
+                            <p class="bf_label scroll_hi hide_74 l">Total</p>
+                            <div class="bf_r_detail ii_field_wr">
+                                <table class="bf_table ib">
+                                    <tr>
+                                        <td>=</td>
+                                        <td><span id="total_price" class="price r b big_font"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </form>
-                       
-
                 </div>
+            </div>
+        </div>
+        <div class="ii_content_wr fw ">
+            <div class="ii_content ii_w">
+                <div class="wrapper">
+                    <div>
+                        <div class="triip_detail_wrap triip_fl">
+                            <div class="pad10_0">
+                                <div class="triip_breadcrumb">
+                                    <a>Triip</a> ›
+                                    <a>Vietnam</a> ›
+                                    <a>Sapa</a> ›
+                                    <a>Charity Travelling with Black H&#39;mong kids in Sin Chai village.</a>
+                                </div>
+                            </div>
+                            <div class="l_fl">
+                                <div class="triip_top_detail r_box_wr">
+                                    <div class="triip_img_title_wr pr">
+                                        <div class="triip_top_img_wr"></div>
+                                        <div class="triip_title_wrap pa">
+                                            <div class="triip_ind_wr ac"></div>
+                                            <div class="triip_title_rating">
+                                                <h1 class="triip_title">Charity Travelling with Black H&#39;mong kids in Sin Chai village. </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="r_box_text pad20_0">
+                                        <div class="highlight_txt">
+                                            <h3 class="l">What's so special?</h3>
+                                            <div class="r">
+                                                <style type="text/css">.social_icon_wr{margin-left:5px;}.triip_share{padding-top:9px;}.gg_icon_wr{width:60px;}</style>
+                                                <div class="triip_share r fw_fl al_fl">
+                                                    <ul class="bxslider">
+                                                        <li><img src="images/triip_logo_boder1.png" title="Happy trees"/></li>
+                                                        <li><img src="images/triip_logo_boder1.png" title="Happy trees"/></li>
+                                                        <li><img src="images/triip_logo_boder1.png" title="Happy trees"/></li>
+                                                        <li><img src="images/triip_logo_boder1.png" title="Happy trees"/></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r td_right_col ac_fl fw_fl">
+                            <div class="al">
+                                <div class="rb10 oh">
+                                </div>
+                                <div class="triip_detail_box rb10 oh mar20_0 w_bg">
+                                    <div class="triip_bg pad0_20"><h4 class="clr_FFF pad10_0">Triip detail</h4></div>
+                                    <div class="pad10_0">
+                                        <div class="pad0_20">
+                                            <div class="pad10_0">
+                                                <div class="b">Place:</div>
+                                                <a class="tdb_item tdb_place" href="/sapa/">Sapa</a>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Transportation:</div>
+                                                <div class="tdb_item tdb_no_icon">
+                                                    <div class="tran_icon tran_bicycle"></div>
+                                                    <div class="tran_icon tran_walking"></div>
+                                                </div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Duration:</div>
+                                                <div class="tdb_item tdb_duration">8 hours</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Language:</div>
+                                                <div class="tdb_item tdb_language">English</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Max quantity:</div>
+                                                <div class="tdb_item tdb_quantity">5 people</div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Category:</div>
+                                                <div class="ib">
+                                                    <a class="ib category_icon category_art-culture" href="/vietnam/sapa/?category=art-culture" title="Art &amp; Culture"></a>
+                                                </div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Including:</div>
+                                                <div class="tdb_item tdb_include tdb_clude"><p>Entrance tickets, English speaking guide, lunch, candies and sweets for kids, motorbike-taxi pick up back to Sapa.</p></div>
+                                            </div>
+                                            <div class="pad10_0">
+                                                <div class="b">Excluding:</div>
+                                                <div class="tdb_item tdb_exclude tdb_clude"><p>Personal expenses.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_wr fw">
+            <div class="footer ii_w ac_fl pr">
+                <div class="pr">
+                    <div class="r footer_menu txt_menu triip_fl">
+                        <a class="footer_item" href="https://static.triip.me/The_Triip_Book_1.0.pdf">Triip Book</a>
+                        <a class="footer_item" href="/wiki-triip/">Wiki Triip</a>
+                        <a class="footer_item" href="/blog/">Blog</a>
+                        <a class="footer_item" href="/about-us/">About us</a>
+                        <a class="footer_item" href="/contact-us/">Contact</a>
+                        <a class="footer_item" href="/faqs/">FAQs</a>
+                        <a class="footer_item" href="/terms-of-service/">Policies</a>
+                    </div>
+                    <div class="l triip_fl">
+                        <div class="l footer_parner triip_fl">
+                            <div>Partners</div>
+                            <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics"/></a>
+                        </div>
+                        <div class="soccial_footer l triip_fl">
+                            <div>Find us on</div>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://www.facebook.com/triip.me">
+                                <img src="https://static.triip.me/images/facebook.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item first img_menu" href="http://twitter.com/triipme">
+                                <img src="https://static.triip.me/images/twitter.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="publisher" class="footer_item img_menu" href="https://plus.google.com/117155709114209869218/posts">
+                                <img src="https://static.triip.me/images/google_plus.svg" width="36" height="36"/>
+                            </a>
+                            <a rel="nofollow" class="footer_item img_menu" href="http://pinterest.com/triipme/">
+                                <img src="https://static.triip.me/images/pinterest.svg" width="36" height="36"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="triip_fl r"><span class=" ">©2013 Triip Corp. All rights reserved.</span></div>
+                    <div class="c"></div>
+                </div>
+                <div class="c"></div>
             </div>
         </div>
     </h:body>
